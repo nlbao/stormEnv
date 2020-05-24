@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/nlbao/.oh-my-zsh"
 
@@ -106,4 +108,3 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/env/apps/bash/aliases.sh ]; then
     . ~/env/apps/bash/aliases.sh
 fi
-

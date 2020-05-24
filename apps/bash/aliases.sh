@@ -63,9 +63,19 @@ alias myos='cat /etc/os-release; lsb_release -a; uname -r'
 alias retmux='tmux source-file ~/.tmux.conf'
 
 function tmuxall {
-    tmux -at -t all
+    tmux attach -t all
 }
 
 function tmux_start {
     tmux new -s "$1" \; send-keys "os $1" 'C-m'
 }
+    
+    # pyhon
+alias python="python3"
+alias pip="pip3"
+
+    # dotnet
+export PATH="$PATH:/Users/nlbao/.dotnet/tools"
+
+
+
