@@ -76,7 +76,10 @@ ZSH_THEME_RANDOM_CANDIDATES=( "agnoster" )
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,3 +111,12 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/env/apps/bash/aliases.sh ]; then
     . ~/env/apps/bash/aliases.sh
 fi
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+zplug "b4b4r07/enhancd", use:init.sh
+zplug load --verbose
+export ENHANCD_FILTER=fzy

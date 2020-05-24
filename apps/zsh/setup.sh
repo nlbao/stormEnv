@@ -20,3 +20,10 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 # settings
 # change in preferences > display > text > ANSI Colors (customise based on your vision)
 # Source Code Pro is okay
+
+# others
+# ref: https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
+# Note: $ZSH_CUSTOM/plugins path is by default ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+brew install zsh-syntax-highlighting
+brew install zplug
