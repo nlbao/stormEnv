@@ -67,6 +67,7 @@ set -g @plugin 'jimeh/tmux-themepack'
 
 # Automatic restore
 set -g @continuum-restore 'on'
+set -g @continuum-save-interval '15'
 set -g status-right 'Continuum status: #{continuum_status}'
 
 # theme
