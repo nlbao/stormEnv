@@ -1,6 +1,10 @@
 # some more ls aliases
-alias ll='ls -alFh'
-# alias ll='ls -lah --color=auto --time-style="+%a %Y-%m-%d %H:%M"'
+export CLICOLOR=1
+# export LSCOLORS=ExFxCxDxBxegedabagacad  # Default
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx  # black background
+# export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd  # mimic the colors of a typical Linux terminal:
+alias ll='ls -alFhGp'  # macOS
+# alias ll='ls -lah --color=auto --time-style="+%a %Y-%m-%d %H:%M"'   # only for Linux, not for MacOS
 
 # Add an "alert" alias for long running commands.  Use like so:
 
@@ -34,6 +38,8 @@ alias glall='git log '$GLF2
 alias gstt='git status'
 alias gitf='git fetch'
 alias gdiff='git diff'
+alias grset='git reset'
+alias gckout='git checkout'
 alias gadd='git add'
 alias gcom='git commit -m'
 alias gcom_add='git commit --amend'
