@@ -24,6 +24,7 @@ bind -n S-Up resize-pane -U
 bind -n S-Down resize-pane -D
 
 # switch panes using Alt-arrow without prefix
+	# Linux
 bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U

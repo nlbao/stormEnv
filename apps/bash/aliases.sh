@@ -1,3 +1,13 @@
+# get current OS
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     export MACHINE_OS=linux;;
+    Darwin*)    export MACHINE_OS=macos;;
+    CYGWIN*)    export MACHINE_OS=Cygwin;;
+    MINGW*)     export MACHINE_OS=MinGw;;
+    *)          export MACHINE_OS="UNKNOWN:${unameOut}"
+esac
+
 # some more ls aliases
 export CLICOLOR=1
 # export LSCOLORS=ExFxCxDxBxegedabagacad  # Default
@@ -66,6 +76,8 @@ alias myip='hostname --ip-address'
 alias myos='cat /etc/os-release; lsb_release -a; uname -r'
 
     # tmux
+unlink ~/.tmux.conf
+ln -s ~/env/apps/tmux/${MACHINE_OS}/conf.sh ~/.tmux.conf
 alias retmux='tmux source-file ~/.tmux.conf'
 
 function tmuxall {
