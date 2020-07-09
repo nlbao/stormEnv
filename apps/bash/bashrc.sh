@@ -64,7 +64,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    # alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
@@ -84,7 +84,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-source ./aliases.sh
+CURRENT_SCRIPT_FILE=`realpath $0`
+CURRENT_SCRIPT_DIR=`dirname $CURRENT_SCRIPT_FILE`
+source "$CURRENT_SCRIPT_DIR/aliases.sh"
 
 # added by Anaconda2 4.1.0 installer
 export PATH="/home/nlbao/anaconda2/bin:$PATH"
@@ -106,8 +108,8 @@ PS1=$TIME' '$USERNAME' '$HOST' '$LOCATION''$BRANCH'\[\033[00m\] \$ ';
 alias prm=". ~/tools/prm/prm.sh"
 
     # ls
-alias ls='ls --color'
-alias ll='ls -lah --color=auto --time-style="+%a %Y-%m-%d %H:%M"'
+# alias ls='ls --color'
+# alias ll='ls -lah --color=auto --time-style="+%a %Y-%m-%d %H:%M"'
 LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
 
