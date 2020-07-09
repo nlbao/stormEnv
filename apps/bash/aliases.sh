@@ -88,12 +88,24 @@ function tmux_start {
     tmux new -s "$1" \; send-keys "os $1" 'C-m'
 }
     
-    # pyhon
-alias python="python3"
-alias pip="pip3"
-
     # dotnet
 export PATH="$PATH:/Users/nlbao/.dotnet/tools"
 
+    # virtual environment
+export MY_VENVS='~/.venvs/'
 
+function venv {
+    mkdir -p "$MY_VENVS"
+    cd "$MY_VENVS"
+    python3 -m venv "$1"
+    pwd
+    ll | grep "$1"
+    cd -
+}
 
+function venv_on {
+    source "$MY_VENVS/$1/bin/activate"
+}
+
+alias ven_list="ll $MY_VENVS/"
+alias deact='deactivate'
