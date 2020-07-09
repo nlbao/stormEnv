@@ -12,9 +12,10 @@ export ZSH="/Users/nlbao/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vcs dir rbenv)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user host vcs dir rbenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv user host dir vcs newline)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs status load)
-unset POWERLEVEL9K_LEFT_PROMPT_ELEMENTS
+# unset POWERLEVEL9K_LEFT_PROMPT_ELEMENTS
 unset POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS
 
 # Set list of themes to pick from when loading at random
