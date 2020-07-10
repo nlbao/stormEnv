@@ -91,6 +91,10 @@ function tmux_start {
     # dotnet
 export PATH="$PATH:/Users/nlbao/.dotnet/tools"
 
+    # python
+alias python="python3"
+alias pip="pip3"
+
     # virtual environment
 export MY_VENVS='~/.venvs/'
 
