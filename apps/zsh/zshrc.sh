@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Ref: virtualenv name not show in zsh prompt - https://stackoverflow.com/a/50302073/7874018
+
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
@@ -13,7 +15,7 @@ export ZSH="/Users/nlbao/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user host vcs dir rbenv)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv user host dir vcs newline)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda virtualenv user host dir vcs newline)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs status load)
 # unset POWERLEVEL9K_LEFT_PROMPT_ELEMENTS
 unset POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS
@@ -78,8 +80,8 @@ ZSH_THEME_RANDOM_CANDIDATES=( "agnoster" )
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	zsh-autosuggestions
+    git
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -121,3 +123,18 @@ source $ZPLUG_HOME/init.zsh
 zplug "b4b4r07/enhancd", use:init.sh
 zplug load --verbose
 export ENHANCD_FILTER=fzy
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/nlbao/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/nlbao/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/nlbao/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/nlbao/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
