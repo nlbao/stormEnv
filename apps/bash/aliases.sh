@@ -92,24 +92,24 @@ function tmux_start {
 export PATH="$PATH:/Users/nlbao/.dotnet/tools"
 
     # python
-alias python="python3"
-alias pip="pip3"
+# alias python="python3"
+# alias pip="pip3"
 
     # virtual environment
-export MY_VENVS='~/.venvs/'
+export MY_VENVS="$HOME/miniconda3/envs/"
 
-function venv {
-    mkdir -p "$MY_VENVS"
-    cd "$MY_VENVS"
-    python3 -m venv "$1"
-    pwd
-    ll | grep "$1"
-    cd -
+function venv_new {
+    conda create -n $1
+    # conda create -n pyspider python=3.6
 }
 
-function venv_on {
-    source "$MY_VENVS/$1/bin/activate"
+function ven_remove {
+    conda remove -n "$1" -all
 }
 
-alias ven_list="ll $MY_VENVS/"
-alias deact='deactivate'
+function act {
+    conda activate $1
+}
+
+alias deact='conda deactivate'
+alias venvs="conda env list"
