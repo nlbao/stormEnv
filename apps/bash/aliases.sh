@@ -109,7 +109,8 @@ function ven_remove {
 
 function act {
     conda activate $1
+    which python pip
 }
 
-alias deact='conda deactivate'
+alias deact='conda deactivate ; which python pip'
 alias venvs="conda env list"
