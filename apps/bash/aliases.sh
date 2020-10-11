@@ -49,13 +49,25 @@ alias gstt='git status'
 alias gitf='git fetch'
 alias gdiff='git diff'
 alias grset='git reset'
-alias gckout='git checkout'
+alias gck='git checkout'
 alias gadd='git add'
 alias gcom='git commit -m'
 alias gcom_add='git commit --amend'
 alias gpush='git push origin $(get_git_branch)'
 alias gpush_add='git push origin -u +$(get_git_branch)'
 alias gpull='git pull origin $(get_git_branch)'
+
+function gall() {
+    gadd .
+    gcom "$1"
+    gpush
+}
+
+function gall_add() {
+    gadd .
+    gcom_add
+    gpush_add
+}
 
     # cd
 alias ..='cd ..'
@@ -83,6 +95,7 @@ alias retmux='tmux source-file ~/.tmux.conf'
 function tmuxall {
     tmux attach -t all
 }
+alias tt=tmuxall
 
 function tmux_start {
     tmux new -s "$1" \; send-keys "os $1" 'C-m'
