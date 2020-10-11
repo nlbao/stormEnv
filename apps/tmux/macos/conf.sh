@@ -60,21 +60,23 @@ setw -g monitor-activity on
 set -g status-keys vi
 set -g history-limit 10000
 
+# Automatic restore
+set -g @continuum-restore 'on'
+set -g @continuum-save-interval '15'
+set -g history-file ~/.tmux_history
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @plugin 'jimeh/tmux-themepack'
+# set -g @plugin 'jimeh/tmux-themepack'  # this doesn't work with tmux-continuum
 
-# Automatic restore
-set -g @continuum-restore 'on'
-set -g @continuum-save-interval '15'
+# Continuum stus
 set -g status-right 'Continuum status: #{continuum_status}'
 
 # theme
-set -g @themepack 'powerline/block/cyan'
+# set -g @themepack 'powerline/block/cyan'  # this doesn't work with tmux-continuum
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
