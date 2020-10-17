@@ -10,13 +10,14 @@ endif
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+" TODO(nlbao): install plugins based on user's plugin mananger
+" TODO(nlbao): load the plugin list from a custom file, so changing it won't
+" affect git source tree
 " Make sure you use single quotes
 " use ctrl + Wl to go to right window and ctrl + Wh to go to left window. or ctrl + w twice to toggle between the two.
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
-
-
 " Themes
 Plug 'crusoexia/vim-monokai'
 
@@ -24,75 +25,8 @@ Plug 'crusoexia/vim-monokai'
 " Maybe you'll need to run this ::PlugInstall
 call plug#end()
 
-" Other settings
-set number
-syntax on
-colorscheme monokai
-set t_Co=256
+"""" NOTE: select which config to be loaded here """"
+let $CONF_PATH="~/env/apps/vim/"
+source $CONF_PATH/nerdtree.vim
+source $CONF_PATH/misc.vim
 
-""""" NERDTree
-autocmd vimenter * NERDTree
-autocmd VimEnter * wincmd p  " Jump to the main window.
-map <C-n> :NERDTreeToggle<CR>
-" How can I close vim if the only window left open is a NERDTree?
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Toogle NERDTree by Ctrl + w + n
-noremap <C-w>n :NERDTreeToggle<cr> 
-" Window splitting
-noremap <C-w>- :split<cr>
-noremap <C-w>\| :vsplit<cr>
-" Close panel: Ctrl + w + c
-
-" t: Open the selected file in a new tab
-" T: open in new tab silently
-" i: Open the selected file in a horizontal split window
-" s: Open the selected file in a vertical split window
-" gi: preview horizontal split
-" gs: preview verticla split
-" I: Toggle hidden files
-"  m: Show the NERD Tree menu
-" R: Refresh the tree, useful if files change outside of Vim
-" ?: Toggle NERD Tree's quick help
-" m: display a menu that allows file system operations to be performed from within NERD Tree.
-" ma: create a new file or directory
-" md: delete the current selected item in the tree
-" o: open & close node / bookmark
-" O: recursively open node
-" x: close parent of node
-" X: close all child nodes of current node recursively
-" :Bookmark <desired bookmark name>
-" B: toggle bookmark list
-" D: delete bookmark
-
-"" Filesystem mappings~
-" C: change tree root to the selected dir
-" u: move tree root up a dir
-" U: move tree root up a dir but leave old root open
-" r: refresh cursor dir
-" R: refresh current root
-" cd: change the CWD to the selected dir
-" CD: change tree root to CWD
-" I: hidden files (off)
-" f: file filters (on)
-" F: files (on)
-
-" Switch between tabs: gt (next) or gT (previous). TODO: how to map this to
-" Ctrl+tab: https://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree
-" map  <C-tab> :tabn<CR>
-" map <S-Right> :tabn<cr>
-" map  <C-h> :tabp<CR>
-""""
-
-"""" Delete file buffers: https://dev.to/jorge_rockr/my-development-environment-setup-part-2-4ck9
-noremap <C-w>b :Bclose<cr>
-""""
-
-" powerline theme:
-" Ref: https://fedoramagazine.org/add-power-terminal-powerline/
-" python3 from powerline.vim import setup as powerline_setup
-" python3 powerline_setup()
-" python3 del powerline_setup
-set laststatus=2 " Always display the statusline in all windows
-set showtabline=2 " Always display the tabline, even if there is only one tab
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-set t_Co=256
