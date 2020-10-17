@@ -73,6 +73,10 @@ colorscheme monokai
 set t_Co=256
 set encoding=UTF-8  " For vim-devicons
 
+" highlight search results. Press enter to clear highlighted
+set hlsearch
+nnoremap <CR> :noh<CR>  
+
 " Switch between tabs: gt (next) or gT (previous). TODO: how to map this to
 " Ctrl+tab: https://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree
 " map  <C-tab> :tabn<CR>
