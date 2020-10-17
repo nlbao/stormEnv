@@ -26,6 +26,8 @@ Plug 'vim-airline/vim-airline-themes'
 " Guide: https://github.com/tpope/vim-surround
 Plug 'tpope/vim-surround'
 
+Plug 'tpope/vim-commentary'
+
 " Themes
 Plug 'crusoexia/vim-monokai'
 Plug 'ryanoasis/vim-devicons'

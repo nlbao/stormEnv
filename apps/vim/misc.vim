@@ -79,10 +79,14 @@ nnoremap <CR> :noh<CR>
 
 " Switch between tabs: gt (next) or gT (previous). TODO: how to map this to
 " Ctrl+tab: https://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree
-" map  <C-tab> :tabn<CR>
+" map  <c-tab> :tabn<CR>
 " map <S-Right> :tabn<cr>
-" map  <C-h> :tabp<CR>
+" map  <c-h> :tabp<CR>
 """"
+
+" toggle comments (vim-commentary)
+noremap <leader>/ :Commentary<cr>
+noremap <C-m> :Commentary<cr>
 
 " Set the cursor to a vertical line in insert mode and a solid block in command mode
 let &t_SI = "\<esc>\<esc>\<esc>]50;CursorShape=1\x7\<esc>\\"
