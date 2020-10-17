@@ -79,6 +79,22 @@ set t_Co=256
 " map  <C-h> :tabp<CR>
 """"
 
+" Set the cursor to a vertical line in insert mode and a solid block in command mode
+let &t_SI = "\<esc>\<esc>\<esc>]50;CursorShape=1\x7\<esc>\\"
+let &t_EI = "\<esc>\<esc>\<esc>]50;CursorShape=0\x7\<esc>\\"
+set timeout timeoutlen=1000 ttimeoutlen=10
+
+" Indention
+set expandtab " Spaces instead of tabs
+set shiftwidth=2 " 1 tab = 2 spaces
+set tabstop=2 " 1 tab = 2 columns
+set softtabstop=2 " Columns of tabbing in insert mode
+set smarttab
+set ai " Auto indent
+set si " Smart indent
+set nowrap " Do not wrap lines  " Set specific indention for file types
+autocmd FileType htmlcheetah setlocal noexpandtab ai si nowrap
+
 """" Delete file buffers: https://dev.to/jorge_rockr/my-development-environment-setup-part-2-4ck9
 noremap <C-w>b :Bclose<cr>
 """"
