@@ -71,6 +71,7 @@ set number
 syntax on
 colorscheme monokai
 set t_Co=256
+set encoding=UTF-8  " For vim-devicons
 
 " Switch between tabs: gt (next) or gT (previous). TODO: how to map this to
 " Ctrl+tab: https://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree
@@ -97,7 +98,6 @@ autocmd FileType htmlcheetah setlocal noexpandtab ai si nowrap
 
 """" Delete file buffers: https://dev.to/jorge_rockr/my-development-environment-setup-part-2-4ck9
 noremap <C-w>b :Bclose<cr>
-""""
 
 " powerline theme:
 " Ref: https://fedoramagazine.org/add-power-terminal-powerline/

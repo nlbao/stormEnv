@@ -19,9 +19,14 @@ Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-obsession'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Themes
 Plug 'crusoexia/vim-monokai'
+Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-gitgutter'
+Plug 'preservim/tagbar'
 
 " Initialize plugin system
 " Maybe you'll need to run this ::PlugInstall
@@ -32,4 +37,5 @@ let $CONF_PATH="~/env/apps/vim/"
 source $CONF_PATH/nerdtree.vim
 source $CONF_PATH/misc.vim
 source $CONF_PATH/session.vim
+source $CONF_PATH/tagbar.vim
 
