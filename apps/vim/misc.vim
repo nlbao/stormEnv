@@ -62,6 +62,9 @@ noremap <silent> <c-s-j> :call <SID>swap_down()<CR>
 
 """" Multi cursor TODO(nlbao)
 
+"""" Wild Menu (to show file candidates when pressing TAB
+set wildmenu
+set wildmode=full
 
 """" Other settings
 set number

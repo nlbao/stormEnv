@@ -18,6 +18,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-obsession'
+
 " Themes
 Plug 'crusoexia/vim-monokai'
 
@@ -29,4 +31,5 @@ call plug#end()
 let $CONF_PATH="~/env/apps/vim/"
 source $CONF_PATH/nerdtree.vim
 source $CONF_PATH/misc.vim
+source $CONF_PATH/session.vim
 
