@@ -102,14 +102,15 @@ function tmux_start {
 }
     
     # dotnet
-export PATH="$PATH:/Users/nlbao/.dotnet/tools"
+#export PATH="$PATH:/Users/nlbao/.dotnet/tools"
+export PATH="$PATH:${HOME}/.dotnet/tools"
 
     # python
 # alias python="python3"
 # alias pip="pip3"
 
     # virtual environment
-export MY_VENVS="$HOME/miniconda3/envs/"
+export MY_VENVS="${HOME}/miniconda3/envs/"
 
 function venv_new {
     conda create -n $1
