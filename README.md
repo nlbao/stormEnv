@@ -1,3 +1,5 @@
+![build](https://github.com/nlbao/stormEnv/workflows/build/badge.svg)
+
 # stormEnv
 
 Spring-up your favorite development environment easily and quickly (like a ***Storm***!).
