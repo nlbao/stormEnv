@@ -26,3 +26,8 @@ Setup one app
 * Auto detect your operating system and run the corresponding scripts. Currently support macOS and ubuntu (other linux distros may works, too).
 * Support common apps such as vim, tmux, zsh, etc.
 * Tested (see https://github.com/nlbao/stormEnv/actions).
+
+## Contribution Guide
+* Fork [this project](https://github.com/nlbao/stormEnv).
+* Resolve an issue in [this list](https://github.com/nlbao/stormEnv/issues) or file your own issues. Bug fixings, app feature or new app contribution are welcome!
+* Create a new [pull request](https://github.com/nlbao/stormEnv/pulls) and together we'll review & merge it. :)
