@@ -89,10 +89,10 @@ CURRENT_SCRIPT_DIR=`dirname $CURRENT_SCRIPT_FILE`
 source "$CURRENT_SCRIPT_DIR/aliases.sh"
 
 # added by Anaconda2 4.1.0 installer
-export PATH="/home/nlbao/anaconda2/bin:$PATH"
+export PATH="${HOME}/anaconda2/bin:$PATH"
 
 # google_app_engine
-export PATH="/home/nlbao/apps/google_appengine:$PATH"
+export PATH="${HOME}/apps/google_appengine:$PATH"
 
 TIME='\[\033[01;31m\]\t';
 # TIME='\t';

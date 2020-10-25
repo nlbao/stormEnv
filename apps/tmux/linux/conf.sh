@@ -1,4 +1,4 @@
-# ln -s /home/nlbao/env/apps/tmux/conf.sh ~/.tmux.conf
+# ln -s ${HOME}/env/apps/tmux/conf.sh ~/.tmux.conf
 
 # change prefix to C-a
 unbind C-b
