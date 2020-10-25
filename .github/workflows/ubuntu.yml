@@ -25,3 +25,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Setup all the components
         run: chmod +x ./setup.sh && ./setup.sh
+
+      - name: Verify file paths
+        run: ls -alh ~/env ; ls -alh ~/.bashrc ; ls -alh ~/.zshrc ; ls -alh ~/.tmux.conf
