@@ -1,12 +1,15 @@
-cd ~/env
+# copy files to ~/env/ 
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+mkdir -p ~/env
+cp -R $SCRIPT_DIR/* ~/env/
 
 # bash
 mv ~/.bashrc ~/.bashrc.bak
-ln -s ~/env/apps/bash/bashrc.sh ~/bashrc
+ln -s ~/env/apps/bash/bashrc.sh ~/.bashrc
 
 # zsh
 mv ~/.zshrc ~/.zshrc.bak
-ln -s ~/env/apps/zsh/zshrc.sh ~/zshrc
+ln -s ~/env/apps/zsh/zshrc.sh ~/.zshrc
 
 # tmux
 mv ~/.tmux.conf ~/.tmux.conf.bak
