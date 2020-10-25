@@ -1,3 +1,9 @@
+![license](https://img.shields.io/github/license/nlbao/stormEnv)
+![build](https://github.com/nlbao/stormEnv/workflows/build/badge.svg)
+![github-last-commit](https://img.shields.io/github/last-commit/nlbao/stormEnv)
+![tokei-line-count](https://img.shields.io/tokei/lines/github/nlbao/stormEnv)
+![github-file-size](https://img.shields.io/github/languages/code-size/nlbao/stormEnv)
+
 # stormEnv
 
 Spring-up your favorite development environment easily and quickly (like a ***Storm***!).
