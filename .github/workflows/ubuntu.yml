@@ -24,4 +24,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Setup all the components
-        run: ./setup.sh
+        run: chmod +x ./setup.sh && setup.sh
