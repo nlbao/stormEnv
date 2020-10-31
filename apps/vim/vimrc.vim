@@ -22,10 +22,12 @@ Plug 'tpope/vim-obsession'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Programming languages
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Guide: https://catonmat.net/vim-plugins-surround-vim
 " Guide: https://github.com/tpope/vim-surround
 Plug 'tpope/vim-surround'
-
 Plug 'tpope/vim-commentary'
 
 " Themes
