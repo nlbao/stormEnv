@@ -69,6 +69,11 @@ function gall_add() {
     gpush_add
 }
 
+function heroku_push() {
+  branch=$(get_git_branch)
+  git push "heroku-$branch" "$branch:main"
+}
+
     # cd
 alias ..='cd ..'
 alias .3='cd ../../../'
@@ -104,6 +109,11 @@ function tmux_start {
     # dotnet
 #export PATH="$PATH:/Users/nlbao/.dotnet/tools"
 export PATH="$PATH:${HOME}/.dotnet/tools"
+
+    # golang
+export GOPATH="${HOME}/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$GOBIN:$PATH"
 
     # python
 # alias python="python3"
