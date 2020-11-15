@@ -88,6 +88,10 @@ inoremap <c-t>     <Esc>:tabnew<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 nnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
 vnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
+
+" TODO: (doesn't work) Move the current tab to left / right by using <Shift + Alt + Left/Right>
+" noremap <S-A-Left>  :-tabmove<cr>
+" noremap <S-A-Right> :+tabmove<cr>
 """"
 
 " use another key for leader
