@@ -21,6 +21,7 @@ Plug 'preservim/nerdtree' |
 Plug 'tpope/vim-obsession'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'easymotion/vim-easymotion'
 
 " Programming languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -51,4 +52,5 @@ source $CONF_PATH/session.vim
 source $CONF_PATH/tagbar.vim
 source $CONF_PATH/ctrlp.vim
 source $CONF_PATH/YouCompleteMe.vim
+source $CONF_PATH/easymotion.vim
 
