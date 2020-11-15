@@ -89,6 +89,8 @@ alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 alias wget='wget -c'  # resume wget by default
 alias hs='history | grep $1'  # history search (use: hs sometext)
 alias svim='sudo vim'  # sudo vim
+alias vim='mvim -v'  # TODO: Mac only (MacVim)
+alias vi='mvim -v'  # TODO: Mac only (MacVim)
 alias myip='hostname --ip-address'
 alias myos='cat /etc/os-release; lsb_release -a; uname -r'
 
