@@ -69,7 +69,6 @@ set wildmode=full
 """" Other settings
 set number
 syntax on
-colorscheme monokai
 set t_Co=256
 set encoding=UTF-8  " For vim-devicons
 
@@ -83,6 +82,9 @@ nnoremap <CR> :noh<CR>
 " map <S-Right> :tabn<cr>
 " map  <c-h> :tabp<CR>
 """"
+
+" use another key for leader
+let mapleader = ","  
 
 " toggle comments (vim-commentary)
 noremap <leader>/ :Commentary<cr>
