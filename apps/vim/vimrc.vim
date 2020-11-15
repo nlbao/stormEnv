@@ -22,6 +22,7 @@ Plug 'tpope/vim-obsession'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Programming languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }

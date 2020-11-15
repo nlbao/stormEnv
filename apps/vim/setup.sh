@@ -13,9 +13,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # vim +PlugInstall +qall  # TODO: fix this. Github Action timeout
 # TODO: add commands for other plugin managers
 
-# install ctrlp
-git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/vim/bundle/ctrlp.vim
-
 # TODO: add flag to run this
 function install_YouCompleteMe {
   git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe

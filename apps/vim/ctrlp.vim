@@ -1,5 +1,3 @@
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 " :help ctrlp.txt  for help
 " https://github.com/ctrlpvim/ctrlp.vim
 
