@@ -49,4 +49,5 @@ colorscheme monokai
 source $CONF_PATH/nerdtree.vim
 source $CONF_PATH/session.vim
 source $CONF_PATH/tagbar.vim
+source $CONF_PATH/ctrlp.vim
 
