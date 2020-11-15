@@ -76,11 +76,18 @@ set encoding=UTF-8  " For vim-devicons
 set hlsearch
 nnoremap <CR> :noh<CR>  
 
-" Switch between tabs: gt (next) or gT (previous). TODO: how to map this to
-" Ctrl+tab: https://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree
-" map  <c-tab> :tabn<CR>
-" map <S-Right> :tabn<cr>
-" map  <c-h> :tabp<CR>
+" TODO: Tab navigation like Firefox: https://vim.fandom.com/wiki/Alternative_tab_navigation
+" nnoremap <c-S-tab> :tabprevious<CR>
+" nnoremap <c-tab>   :tabnext<CR>
+" inoremap <c-S-tab> <Esc>:tabprevious<CR>i
+" inoremap <c-tab>   <Esc>:tabnext<CR>i
+nnoremap <c-t>     :tabnew<CR>
+inoremap <c-t>     <Esc>:tabnew<CR>
+
+" Go to last active tab
+au TabLeave * let g:lasttab = tabpagenr()
+nnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
+vnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
 """"
 
 " use another key for leader
