@@ -103,6 +103,8 @@ set ai " Auto indent
 set si " Smart indent
 set nowrap " Do not wrap lines  " Set specific indention for file types
 autocmd FileType htmlcheetah setlocal noexpandtab ai si nowrap
+command! -nargs=* Wrap set wrap linebreak nolist  " type :Wrap to wrapline
+command! -nargs=* Nowrap set nowrap  " type: Nowrap to unwrap lines
 
 """" Delete file buffers: https://dev.to/jorge_rockr/my-development-environment-setup-part-2-4ck9
 noremap <C-w>b :Bclose<cr>
