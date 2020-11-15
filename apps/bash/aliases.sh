@@ -69,6 +69,11 @@ function gall_add() {
     gpush_add
 }
 
+function heroku_push() {
+  branch=$(get_git_branch)
+  git push "heroku-$branch" "$branch:main"
+}
+
     # cd
 alias ..='cd ..'
 alias .3='cd ../../../'
@@ -84,6 +89,8 @@ alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 alias wget='wget -c'  # resume wget by default
 alias hs='history | grep $1'  # history search (use: hs sometext)
 alias svim='sudo vim'  # sudo vim
+alias vim='mvim -v'  # TODO: Mac only (MacVim)
+alias vi='mvim -v'  # TODO: Mac only (MacVim)
 alias myip='hostname --ip-address'
 alias myos='cat /etc/os-release; lsb_release -a; uname -r'
 
@@ -104,6 +111,11 @@ function tmux_start {
     # dotnet
 #export PATH="$PATH:/Users/nlbao/.dotnet/tools"
 export PATH="$PATH:${HOME}/.dotnet/tools"
+
+    # golang
+export GOPATH="${HOME}/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$GOBIN:$PATH"
 
     # python
 # alias python="python3"

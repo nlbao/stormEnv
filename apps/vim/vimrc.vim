@@ -21,11 +21,15 @@ Plug 'preservim/nerdtree' |
 Plug 'tpope/vim-obsession'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'easymotion/vim-easymotion'
+Plug 'ctrlpvim/ctrlp.vim'
+
+" Programming languages
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Guide: https://catonmat.net/vim-plugins-surround-vim
 " Guide: https://github.com/tpope/vim-surround
 Plug 'tpope/vim-surround'
-
 Plug 'tpope/vim-commentary'
 
 " Themes
@@ -34,14 +38,20 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/tagbar'
 
+"""" NOTE: select which config to be loaded here """"
+let $CONF_PATH="~/env/apps/vim/"
+
+" Should always load misc before the plugins
+source $CONF_PATH/misc.vim
+
 " Initialize plugin system
 " Maybe you'll need to run this ::PlugInstall
 call plug#end()
-
-"""" NOTE: select which config to be loaded here """"
-let $CONF_PATH="~/env/apps/vim/"
+colorscheme monokai
 source $CONF_PATH/nerdtree.vim
-source $CONF_PATH/misc.vim
 source $CONF_PATH/session.vim
 source $CONF_PATH/tagbar.vim
+source $CONF_PATH/ctrlp.vim
+source $CONF_PATH/YouCompleteMe.vim
+source $CONF_PATH/easymotion.vim
 

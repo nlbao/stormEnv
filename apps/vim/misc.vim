@@ -69,7 +69,6 @@ set wildmode=full
 """" Other settings
 set number
 syntax on
-colorscheme monokai
 set t_Co=256
 set encoding=UTF-8  " For vim-devicons
 
@@ -77,12 +76,26 @@ set encoding=UTF-8  " For vim-devicons
 set hlsearch
 nnoremap <CR> :noh<CR>  
 
-" Switch between tabs: gt (next) or gT (previous). TODO: how to map this to
-" Ctrl+tab: https://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree
-" map  <c-tab> :tabn<CR>
-" map <S-Right> :tabn<cr>
-" map  <c-h> :tabp<CR>
+" TODO: Tab navigation like Firefox: https://vim.fandom.com/wiki/Alternative_tab_navigation
+" nnoremap <c-S-tab> :tabprevious<CR>
+" nnoremap <c-tab>   :tabnext<CR>
+" inoremap <c-S-tab> <Esc>:tabprevious<CR>i
+" inoremap <c-tab>   <Esc>:tabnext<CR>i
+nnoremap <c-t>     :tabnew<CR>
+inoremap <c-t>     <Esc>:tabnew<CR>
+
+" Go to last active tab
+au TabLeave * let g:lasttab = tabpagenr()
+nnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
+vnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
+
+" TODO: (doesn't work) Move the current tab to left / right by using <Shift + Alt + Left/Right>
+" noremap <S-A-Left>  :-tabmove<cr>
+" noremap <S-A-Right> :+tabmove<cr>
 """"
+
+" use another key for leader
+let mapleader = ","  
 
 " toggle comments (vim-commentary)
 noremap <leader>/ :Commentary<cr>
@@ -103,6 +116,8 @@ set ai " Auto indent
 set si " Smart indent
 set nowrap " Do not wrap lines  " Set specific indention for file types
 autocmd FileType htmlcheetah setlocal noexpandtab ai si nowrap
+command! -nargs=* Wrap set wrap linebreak nolist  " type :Wrap to wrapline
+command! -nargs=* Nowrap set nowrap  " type: Nowrap to unwrap lines
 
 """" Delete file buffers: https://dev.to/jorge_rockr/my-development-environment-setup-part-2-4ck9
 noremap <C-w>b :Bclose<cr>
