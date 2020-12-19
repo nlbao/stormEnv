@@ -1,5 +1,6 @@
 brew install fontconfig
 brew install wget
+brew install pipenv  # Python virtual env
 
 
 # wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.
